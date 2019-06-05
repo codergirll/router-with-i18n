@@ -1,4 +1,4 @@
-# mamd-router
+# router
 
 ## Project setup
 ```
