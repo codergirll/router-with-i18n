@@ -36,6 +36,8 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
+  // console.log(Vue.i18n);
+  // console.log(this.i18n);
 
   const l = to.params.lang;
   if (l && l !== locales.def && locales.all.indexOf(l) !== -1) {
