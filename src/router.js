@@ -35,30 +35,13 @@ const router = new Router({
   ],
 });
 
+
 router.beforeEach((to, from, next) => {
   // console.log(Vue.i18n);
   // console.log(this.i18n);
-
-  const l = to.params.lang;
-  if (l && l !== locales.def && locales.all.indexOf(l) !== -1) {
-    Vue.i18n.set(l);
-    next();
-  } else if (l && locales.all.indexOf(l) === -1) {
-    Vue.i18n.set(locales.def);
-    next({ name: 'NotFound' });
-  } else {
-    Vue.i18n.set(locales.def);
-    next();
-  }
-});
-
-
-router.beforeEach((to, from, next) => {
-  // next({ name: 'NotFound' });
   let l = to.params.lang;
   if (l && l !== locales.def && locales.all.indexOf(l) !== -1) {
-    // Vue.i18n.set(l);
-    // this.i18n.locale = l;
+    Vue.i18n.set(l);
     next();
   } else if (l && locales.all.indexOf(l) === -1) {
     Vue.i18n.set(locales.def);
