@@ -1,4 +1,4 @@
-# router
+# vue-router-with-i18n
 
 ## Project setup
 ```
